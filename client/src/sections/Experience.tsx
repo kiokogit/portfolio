@@ -38,8 +38,9 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-light dark:bg-dark">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-20 bg-light dark:bg-dark relative overflow-hidden">
+      <div className="absolute right-0 top-0 h-full w-1/3 opacity-10 dark:opacity-20" style={{ backgroundImage: "url('/images/sunset1.jpg')", backgroundSize: "cover", backgroundPosition: "center right" }}></div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-4 flex items-center">
             <span className="text-primary">#</span> Work Experience

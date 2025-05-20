@@ -39,11 +39,14 @@ const About = () => {
             </div>
             
             <div className="order-1 md:order-2 flex justify-center">
-              <img 
-                src="https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500" 
-                alt="Professional developer workstation" 
-                className="rounded-xl shadow-lg w-full max-w-md h-auto object-cover" 
-              />
+              <div className="relative w-full max-w-md">
+                <div className="absolute -top-4 -left-4 w-full h-full border-2 border-primary rounded-xl"></div>
+                <img 
+                  src="/images/sunset3.jpg" 
+                  alt="Vincent Kioko - Software Engineer" 
+                  className="rounded-xl shadow-lg w-full h-auto object-cover z-10 relative" 
+                />
+              </div>
             </div>
           </div>
         </div>

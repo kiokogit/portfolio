@@ -19,12 +19,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   detailsUrl,
 }) => {
   return (
-    <div className="bg-white dark:bg-dark-lighter rounded-lg overflow-hidden shadow-md transition-transform hover:-translate-y-2">
-      <img
-        src={imageSrc}
-        alt={title}
-        className="w-full h-48 object-cover"
-      />
+    <div className="bg-white dark:bg-dark-lighter rounded-lg overflow-hidden shadow-md transition-transform hover:-translate-y-2 border border-light-darker dark:border-dark hover:border-primary/50 dark:hover:border-primary/50">
+      <div className="relative h-48">
+        <img
+          src={imageSrc}
+          alt={title}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end">
+          <div className="p-4 text-white">
+            <h3 className="text-lg font-bold">{title}</h3>
+          </div>
+        </div>
+      </div>
       
       <div className="p-6">
         <h3 className="text-lg font-bold mb-2">{title}</h3>
@@ -45,7 +52,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
         
         <div className="flex justify-between items-center">
-          <a href={detailsUrl} className="text-primary hover:underline">
+          <a 
+            href={detailsUrl} 
+            className="text-primary hover:text-accent transition-colors font-medium"
+          >
             View Details
           </a>
           <a 
@@ -53,9 +63,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             target="_blank" 
             rel="noopener noreferrer"
             aria-label={`Github repository for ${title}`}
-            className="text-dark/70 dark:text-light/70 hover:text-dark dark:hover:text-light"
+            className="text-dark/70 dark:text-light/70 hover:text-primary dark:hover:text-primary transition-colors"
           >
-            <FaGithub />
+            <FaGithub className="text-xl" />
           </a>
         </div>
       </div>

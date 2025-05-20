@@ -15,48 +15,54 @@
   --card-foreground: 20 14.3% 4.1%;
   --border: 20 5.9% 90%;
   --input: 20 5.9% 90%;
-  --primary: 207 90% 54%;
+  --primary: 12 83% 52%;
   --primary-foreground: 211 100% 99%;
-  --secondary: 152 68% 40%;
+  --secondary: 25 100% 50%;
   --secondary-foreground: 60 9.1% 97.8%;
-  --accent: 267 76% 63%;
-  --accent-foreground: 24 9.8% 10%;
+  --accent: 20 90% 40%;
+  --accent-foreground: 24 9.8% 98%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 60 9.1% 97.8%;
   --ring: 20 14.3% 4.1%;
   --radius: 0.5rem;
   
   /* Custom colors from design */
-  --light: 210 40% 98%;
-  --light-darker: 210 20% 90%;
+  --light: 24 30% 95%;
+  --light-darker: 24 20% 90%;
   --dark: 217 36% 17%;
   --dark-lighter: 217 19% 27%;
+  
+  /* Sunset color palette */
+  --sunset-orange: 12 83% 52%;
+  --sunset-red: 0 75% 45%;
+  --sunset-maroon: 0 65% 35%;
+  --sunset-gold: 35 90% 55%;
 }
 
 .dark {
   --background: 217 36% 17%;
   --foreground: 210 40% 98%;
   --muted: 217 19% 27%;
-  --muted-foreground: 210 20% 80%;
+  --muted-foreground: 24 30% 85%;
   --popover: 217 36% 17%;
   --popover-foreground: 210 40% 98%;
   --card: 217 19% 27%;
   --card-foreground: 210 40% 98%;
   --border: 217 19% 27%;
   --input: 217 19% 27%;
-  --primary: 207 90% 54%;
+  --primary: 12 83% 52%;
   --primary-foreground: 211 100% 99%;
-  --secondary: 152 68% 40%;
+  --secondary: 25 100% 50%;
   --secondary-foreground: 60 9.1% 97.8%;
-  --accent: 267 76% 63%;
-  --accent-foreground: 210 40% 98%;
+  --accent: 20 90% 40%;
+  --accent-foreground: 24 9.8% 98%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
   --ring: 212.7 26.8% 83.9%;
   
   /* Custom colors from design */
-  --light: 210 40% 98%;
-  --light-darker: 210 20% 90%;
+  --light: 24 30% 95%;
+  --light-darker: 24 20% 90%;
   --dark: 217 36% 17%;
   --dark-lighter: 217 19% 27%;
 }
