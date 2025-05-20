@@ -42,7 +42,12 @@ const Navbar = () => {
   return (
     <header className={`sticky top-0 z-50 bg-white/90 dark:bg-dark/95 backdrop-blur-sm shadow-sm transition-all ${isScrolled ? 'shadow-md' : ''}`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-primary">
+        <Link href="/" className="text-xl font-bold text-primary flex items-center">
+          <img 
+            src="/images/watch.jpg" 
+            alt="Vincent's Watch" 
+            className="h-10 w-10 rounded-full object-cover mr-2 hidden sm:block border border-primary/30"
+          />
           <span className="font-mono">&lt;</span>Vincent<span className="font-mono">/&gt;</span>
         </Link>
         

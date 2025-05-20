@@ -60,7 +60,18 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 bg-white dark:bg-dark-lighter">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative">
+        <div className="absolute top-0 left-0 w-full h-64 md:h-96">
+          <img 
+            src="/images/casual1.jpg" 
+            alt="Vincent Kioko on railway tracks" 
+            className="w-full h-full object-cover opacity-20 dark:opacity-10"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white dark:to-dark-lighter"></div>
+        </div>
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative pt-40 md:pt-72">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-4 flex items-center">
             <span className="text-primary">#</span> Get In Touch
