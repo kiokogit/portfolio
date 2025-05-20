@@ -80,7 +80,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  @apply bg-primary border-4 border-white dark:border-dark-lighter z-10;
+  @apply bg-primary border-4 border-white dark:border-muted z-10;
 }
 
 .timeline-item::after {
@@ -90,7 +90,7 @@
   top: 20px;
   width: 2px;
   height: calc(100% + 20px);
-  @apply bg-light-darker dark:bg-muted;
+  @apply bg-muted dark:bg-muted;
 }
 
 .timeline-item:last-child::after {
