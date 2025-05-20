@@ -44,14 +44,22 @@ export interface IStorage {
 export class MemStorage implements IStorage {
   private users: Map<number, User>;
   private contactMessages: Map<number, ContactMessage>;
+  private personalInfos: Map<number, PersonalInfo>;
+  private journalEntries: Map<number, JournalEntry>;
   private userCurrentId: number;
   private messageCurrentId: number;
+  private personalInfoCurrentId: number;
+  private journalEntryCurrentId: number;
 
   constructor() {
     this.users = new Map();
     this.contactMessages = new Map();
+    this.personalInfos = new Map();
+    this.journalEntries = new Map();
     this.userCurrentId = 1;
     this.messageCurrentId = 1;
+    this.personalInfoCurrentId = 1;
+    this.journalEntryCurrentId = 1;
   }
 
   // User methods
@@ -108,6 +116,80 @@ export class MemStorage implements IStorage {
   
   async getContactMessage(id: number): Promise<ContactMessage | undefined> {
     return this.contactMessages.get(id);
+  }
+  
+  // Personal info methods
+  async getPersonalInfo(userId: number): Promise<PersonalInfo | undefined> {
+    return Array.from(this.personalInfos.values()).find(
+      (info) => info.userId === userId
+    );
+  }
+  
+  async createPersonalInfo(info: InsertPersonalInfo): Promise<PersonalInfo> {
+    const id = this.personalInfoCurrentId++;
+    const createdAt = new Date();
+    const personalInfo: PersonalInfo = { 
+      ...info, 
+      id, 
+      createdAt,
+      updatedAt: createdAt
+    };
+    this.personalInfos.set(id, personalInfo);
+    return personalInfo;
+  }
+  
+  async updatePersonalInfo(id: number, infoUpdate: Partial<PersonalInfo>): Promise<PersonalInfo | undefined> {
+    const info = this.personalInfos.get(id);
+    if (!info) return undefined;
+    
+    const updatedInfo = { 
+      ...info, 
+      ...infoUpdate,
+      updatedAt: new Date()
+    };
+    this.personalInfos.set(id, updatedInfo);
+    return updatedInfo;
+  }
+  
+  // Journal entry methods
+  async getJournalEntries(userId: number): Promise<JournalEntry[]> {
+    return Array.from(this.journalEntries.values())
+      .filter(entry => entry.userId === userId)
+      .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
+  }
+  
+  async getJournalEntry(id: number): Promise<JournalEntry | undefined> {
+    return this.journalEntries.get(id);
+  }
+  
+  async createJournalEntry(entry: InsertJournalEntry): Promise<JournalEntry> {
+    const id = this.journalEntryCurrentId++;
+    const createdAt = new Date();
+    const journalEntry: JournalEntry = { 
+      ...entry, 
+      id, 
+      createdAt,
+      updatedAt: createdAt
+    };
+    this.journalEntries.set(id, journalEntry);
+    return journalEntry;
+  }
+  
+  async updateJournalEntry(id: number, entryUpdate: Partial<JournalEntry>): Promise<JournalEntry | undefined> {
+    const entry = this.journalEntries.get(id);
+    if (!entry) return undefined;
+    
+    const updatedEntry = { 
+      ...entry, 
+      ...entryUpdate,
+      updatedAt: new Date()
+    };
+    this.journalEntries.set(id, updatedEntry);
+    return updatedEntry;
+  }
+  
+  async deleteJournalEntry(id: number): Promise<boolean> {
+    return this.journalEntries.delete(id);
   }
 }
 

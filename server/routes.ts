@@ -3,8 +3,12 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactMessageSchema } from "@shared/schema";
 import { fromZodError } from "zod-validation-error";
+import { setupAuth } from "./auth";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Set up authentication routes and middleware
+  setupAuth(app);
+  
   // API Routes
   app.get('/api/health', (_req: Request, res: Response) => {
     res.status(200).json({ status: 'ok' });
