@@ -10,10 +10,10 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mt-10">
             <div className="order-2 md:order-1">
-              <h3 className="text-xl font-semibold mb-4">My Journey from Civil to Software Engineering</h3>
+              <h3 className="text-xl font-semibold mb-4">The Software Engineer</h3>
               <p className="mb-4 text-dark/80 dark:text-light/80">
-                With a Bachelor's degree in Civil Engineering and 5 years in the field, I discovered my passion for software development, 
-                which led me to transition into the tech industry.
+                With a Bachelor's degree in Civil Engineering and a self taught resilient pursuit of Software Engineering, I live to integrate technology in our daily lives through building
+                solutions for everyday problems.
               </p>
               <p className="mb-4 text-dark/80 dark:text-light/80">
                 Over the past 4+ years, I've specialized in backend development, creating robust APIs and cloud-based solutions 
@@ -22,7 +22,7 @@ const About = () => {
               </p>
               <p className="mb-6 text-dark/80 dark:text-light/80">
                 Currently, I work as a Software Engineer at Ardhisasa, designing and implementing scalable backend services, 
-                while also sharing my knowledge as a Software Engineering Trainer at Code Yetu.
+                while also sharing my knowledge as a Software Engineering Trainer at Code Yetu Organization.
               </p>
               
               <div className="flex flex-wrap gap-4 mt-8">
@@ -33,7 +33,7 @@ const About = () => {
                   <span className="text-primary font-bold">5+</span> Backend Modules
                 </div>
                 <div className="px-4 py-2 bg-light-darker dark:bg-dark rounded text-sm font-medium">
-                  <span className="text-primary font-bold">50+</span> Students Taught
+                  <span className="text-primary font-bold">50+</span> Students Taught in 3 years
                 </div>
               </div>
             </div>

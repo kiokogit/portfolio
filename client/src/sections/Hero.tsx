@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from "react-icons/fa";
+import {FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaWhatsapp} from "react-icons/fa";
 import resumePdf from "@assets/Vincent Kioko Software Resume 2025.pdf";
 
 const Hero = () => {
@@ -18,8 +18,8 @@ const Hero = () => {
             </h2>
             
             <p className="text-lg mb-8 max-w-2xl text-dark/70 dark:text-light/70">
-              Results-driven Backend Developer with 4+ years of experience building scalable, secure, and high-performance server-side systems. 
-              Journey started in Civil Engineering, evolved into Software Engineering.
+              Results-driven Software Engineer with 4+ years of experience building scalable, secure, and high-performance futuristic tech systems.
+              Passionate about building resilient systems aligned with business goals. Looking to contribute to innovative teams across the EMEA region.
             </p>
             
             <div className="flex flex-wrap gap-4">
@@ -66,9 +66,18 @@ const Hero = () => {
               <a 
                 href="mailto:kiokovincent12@gmail.com"
                 aria-label="Email"
+                target="_blank"
                 className="text-dark/70 dark:text-light/70 hover:text-primary dark:hover:text-primary transition-colors"
               >
                 <FaEnvelope className="text-2xl" />
+              </a>
+              <a
+                  href="https://wa.me/+254703618918"
+                  target="_blank"
+                  aria-label="Whatsapp Chat"
+                  className="text-dark/70 dark:text-light/70 hover:text-primary dark:hover:text-primary transition-colors"
+              >
+                <FaWhatsapp className="text-2xl" />
               </a>
             </div>
           </div>

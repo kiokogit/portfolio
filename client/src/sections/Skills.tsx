@@ -57,20 +57,20 @@ const Skills = () => {
     { name: "Python", percentage: 95 },
     { name: "Django / Django REST Framework", percentage: 90 },
     { name: "PostgreSQL", percentage: 85 },
-    { name: "Node.js", percentage: 80 },
-    { name: "Go", percentage: 70 },
+    { name: "Node.js", percentage: 70 },
+    { name: "Go", percentage: 60 },
   ];
 
   const frontendSkills = [
     { name: "JavaScript", percentage: 85 },
-    { name: "React", percentage: 75 },
+    { name: "React", percentage: 85 },
   ];
 
   const devopsSkills = [
     { name: "Docker", percentage: 90 },
-    { name: "Kubernetes", percentage: 80 },
+    { name: "Kubernetes", percentage: 60 },
     { name: "Google Cloud Platform (GCP)", percentage: 85 },
-    { name: "CI/CD (Github/Gitlab)", percentage: 85 },
+    { name: "CI/CD (Github/Gitlab)", percentage: 95 },
     { name: "Prometheus", percentage: 75 },
   ];
 

@@ -16,7 +16,11 @@ import NotFoundPage from "@/pages/NotFoundPage";
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={Home} />
+      <Route path="/" >
+          <Navbar />
+            <Home />
+          <Footer />
+      </Route>
       <Route path="/auth" component={AuthPage} />
       <ProtectedRoute path="/private" component={PrivateHome} />
       <Route component={NotFoundPage} />
@@ -32,13 +36,8 @@ function App() {
           <TooltipProvider>
             <Toaster />
             <div className="flex flex-col min-h-screen">
-              <Route path="/">
-                <Navbar />
-                <Home />
-                <Footer />
-              </Route>
               <Route path="*">
-                <Router />
+                  <Router />
               </Route>
             </div>
           </TooltipProvider>
