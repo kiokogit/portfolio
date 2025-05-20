@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 152 68% 40%;
+  --secondary-foreground: 60 9.1% 97.8%;
+  --accent: 267 76% 63%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Custom colors from design */
+  --light: 210 40% 98%;
+  --light-darker: 210 20% 90%;
+  --dark: 217 36% 17%;
+  --dark-lighter: 217 19% 27%;
+}
+
+.dark {
+  --background: 217 36% 17%;
+  --foreground: 210 40% 98%;
+  --muted: 217 19% 27%;
+  --muted-foreground: 210 20% 80%;
+  --popover: 217 36% 17%;
+  --popover-foreground: 210 40% 98%;
+  --card: 217 19% 27%;
+  --card-foreground: 210 40% 98%;
+  --border: 217 19% 27%;
+  --input: 217 19% 27%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 152 68% 40%;
+  --secondary-foreground: 60 9.1% 97.8%;
+  --accent: 267 76% 63%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 212.7 26.8% 83.9%;
+  
+  /* Custom colors from design */
+  --light: 210 40% 98%;
+  --light-darker: 210 20% 90%;
+  --dark: 217 36% 17%;
+  --dark-lighter: 217 19% 27%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Timeline styling */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -37px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  @apply bg-primary border-4 border-white dark:border-dark-lighter z-10;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: -28px;
+  top: 20px;
+  width: 2px;
+  height: calc(100% + 20px);
+  @apply bg-light-darker dark:bg-muted;
+}
+
+.timeline-item:last-child::after {
+  display: none;
+}
+
+/* Skill bar styling */
+.skill-bar {
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-level {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+}
+
+/* Code styling */
+.code-overlay {
+  @apply grid grid-cols-8 h-full font-mono text-xs sm:text-sm text-dark dark:text-light opacity-10 dark:opacity-20;
+}
+
+.code-line::before {
+  content: attr(data-line);
+  display: inline-block;
+  width: 25px;
+  @apply text-muted-foreground font-mono select-none;
+}
+
+/* Animation styling */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
