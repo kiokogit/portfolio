@@ -37,6 +37,7 @@ const Navbar = () => {
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Unatum", href: "#entrepreneurship" },
+    { name: "Hobbies", href: "#hobbies" },
     { name: "Contact", href: "#contact" },
   ];
 

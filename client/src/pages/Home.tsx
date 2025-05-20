@@ -5,6 +5,7 @@ import Experience from "@/sections/Experience";
 import Skills from "@/sections/Skills";
 import Projects from "@/sections/Projects";
 import Entrepreneurship from "@/sections/Entrepreneurship";
+import Hobbies from "@/sections/Hobbies";
 import Contact from "@/sections/Contact";
 
 const Home = () => {
@@ -32,6 +33,7 @@ const Home = () => {
       <Skills />
       <Projects />
       <Entrepreneurship />
+      <Hobbies />
       <Contact />
     </main>
   );
