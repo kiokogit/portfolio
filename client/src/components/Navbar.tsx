@@ -91,12 +91,20 @@ const Navbar = () => {
             ))}
           </div>
           
-          <a 
-            href="#contact" 
-            className="hidden md:block px-4 py-2 bg-primary text-white rounded hover:bg-primary/90 transition-colors"
-          >
-            Hire Me
-          </a>
+          <div className="hidden md:flex items-center space-x-4">
+            <a 
+              href="#contact" 
+              className="px-4 py-2 bg-primary text-white rounded hover:bg-primary/90 transition-colors"
+            >
+              Hire Me
+            </a>
+            <Link 
+              href="/auth" 
+              className="px-4 py-2 border border-primary text-primary rounded hover:bg-primary/10 transition-colors"
+            >
+              Private
+            </Link>
+          </div>
         </div>
       </nav>
       
@@ -117,11 +125,18 @@ const Navbar = () => {
             ))}
             <a
               href="#contact"
-              className="mt-2 text-center py-2 bg-primary text-white rounded hover:bg-primary/90 transition-colors"
+              className="text-center py-2 bg-primary text-white rounded hover:bg-primary/90 transition-colors"
               onClick={closeMenu}
             >
               Hire Me
             </a>
+            <Link
+              href="/auth"
+              className="text-center py-2 border border-primary text-primary rounded hover:bg-primary/10 transition-colors"
+              onClick={closeMenu}
+            >
+              Private Portfolio
+            </Link>
           </div>
         </div>
       )}

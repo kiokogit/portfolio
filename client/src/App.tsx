@@ -32,7 +32,14 @@ function App() {
           <TooltipProvider>
             <Toaster />
             <div className="flex flex-col min-h-screen">
-              <Router />
+              <Route path="/">
+                <Navbar />
+                <Home />
+                <Footer />
+              </Route>
+              <Route path="*">
+                <Router />
+              </Route>
             </div>
           </TooltipProvider>
         </AuthProvider>
