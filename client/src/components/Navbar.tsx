@@ -40,6 +40,11 @@ const Navbar = () => {
     { name: "Hobbies", href: "#hobbies" },
     { name: "Contact", href: "#contact" },
   ];
+  
+  // Additional link for the private section
+  const additionalLinks = [
+    { name: "Private", href: "/auth", external: true },
+  ];
 
   return (
     <header className={`sticky top-0 z-50 bg-white/90 dark:bg-dark/95 backdrop-blur-sm shadow-sm transition-all ${isScrolled ? 'shadow-md' : ''}`}>
